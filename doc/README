@@ -1,0 +1,27 @@
+Summary
+
+The project is a Maven archetype for basic Servlet 3.0 based Java web application. None dependencies to any web framework - just plain Java Servlet
+no XML. Jetty plugin included - gets your application running in seconds.
+
+Default idea is taken from: https://github.com/maciejwalkowiak/servlet3-maven-archetype.git
+
+Installation:
+1. Clone this repository 
+
+$ git clone https://github.com/tomascejka/arch-mvn_servlet3-webapp-jetty.git
+
+2. Install it to local Maven repository
+
+$ cd servlet3.0-maven-archetype
+$ mvn install
+
+3. Create project based on this archetype:
+
+$ mvn archetype:generate \
+    -DarchetypeGroupId=cz.tomascejka.archetypes \
+    -DarchetypeArtifactId=servlet3-webapp-jetty-archetype \
+    -DarchetypeVersion=1.0
+
+Run project:
+
+$ mvn jetty:run
